@@ -1,13 +1,9 @@
 ﻿using HHParserWinForm.InnerProg.Parser;
-using MongoDB.Bson;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace HHParserWinForm.InnerProg.Mongo{
+namespace HHParserWinForm.InnerProg.Mongo
+{
     class Replacer{
         public void Replace(string _field, string _searchingValue, string _insertedValue){
             var filter = Builders<PageModel>

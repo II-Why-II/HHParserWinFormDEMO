@@ -3,13 +3,10 @@ using HHParserWinForm.InnerProg.Sender;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace HHParserWinForm.InnerProg{
+namespace HHParserWinForm.InnerProg
+{
     class ActionsPressButton{
         SenderOfRequests send = new SenderOfRequests();
         public async Task<bool> StartButton(AboutBrowser _aboutBrowser, string _textBox1) {

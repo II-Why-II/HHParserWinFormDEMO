@@ -1,10 +1,10 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace HHParserWinForm.InnerProg{
+namespace HHParserWinForm.InnerProg
+{
     public static class MyExtensions{
         public static string GetRefererString(this string _id) => "https://hh.ru/vacancy/" + _id; // + "?from=vacancy_search_list&hhtmFrom=vacancy_search_list&query=c%23";
         public static bool HaveABreak(this int countOfLoop){

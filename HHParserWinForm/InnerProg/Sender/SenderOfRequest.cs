@@ -65,7 +65,7 @@ namespace HHParserWinForm.InnerProg.Sender
             action.ScrollToElement(responseButton)
                 .MoveToElement(responseButton)
                 .Click(responseButton);
-            Thread.Sleep(3000);
+            MyExtensions.MakeRandomPause.SetPause(4);
             _ = 1;
         }
         private async Task<bool> MakeResponse(AboutBrowser _aboutBrowser, IWebDriver _browser, string _responseUrl){
@@ -157,8 +157,8 @@ namespace HHParserWinForm.InnerProg.Sender
             var cookies = client.ResponseHeaders["Set-cookie"];
             File.WriteAllText("ResponseHeaders-Set-cookie.txt", cookies);
 
-            
-            var cc = Cookies.GetAllCookies.GetAllCookiesFromHeader(client.ResponseHeaders["Set-Cookie"], "hh.ru");
+            Cookies.GetAllCookies getCook = new Cookies.GetAllCookies();
+            var cc = getCook.GetAllCookiesFromHeader(client.ResponseHeaders["Set-Cookie"], "hh.ru");
             string rr = "";
             foreach (var cookie in cc)
             {

@@ -1,11 +1,11 @@
 ﻿using HHParserWinForm.InnerProg.Sender;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HHParserWinForm.InnerProg;
 
-namespace HHParserWinForm{
+namespace HHParserWinForm
+{
     public partial class Form1 : Form{
         public Form1(){
             InitializeComponent();
@@ -22,8 +22,8 @@ namespace HHParserWinForm{
             aboutBrowser.BrowserIsStarted = await pressButton.StartButton(aboutBrowser, textBox1.Text);
         }
 
-        private async void button1_Click(object sender, EventArgs e){
-            await pressButton.LoginButton(aboutBrowser, textBox2.Text);
+        private async void button1_Click(object sender, EventArgs e) {
+            Task.Run(() => { pressButton.LoginButton(aboutBrowser, textBox2.Text); });
         }
         
         private void Form1_FormClosed(object sender, FormClosedEventArgs e){
@@ -38,11 +38,8 @@ namespace HHParserWinForm{
 
         private void button4_Click(object sender, EventArgs e){
             string[] fields = { "EmployerName", "VacancyName" };
-            InnerProg.Mongo.Replacer.ReplaceVacanceAndEmployerName(fields, "&nbsp;", " ");
-        }
-
-        private async void button5_Click(object sender, EventArgs e){
-            await pressButton.GoToPageAndDoTheEvil(aboutBrowser, aboutBrowser.NumberOfSearchingPage);
+            InnerProg.Mongo.Replacer replacer = new InnerProg.Mongo.Replacer();
+            Task.Run(() => { replacer.ReplaceVacanceAndEmployerName(fields, "&nbsp;", " "); });
         }
 
         private async void button6_Click(object sender, EventArgs e){

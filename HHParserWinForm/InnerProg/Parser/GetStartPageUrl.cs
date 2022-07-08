@@ -1,7 +1,7 @@
 ﻿namespace HHParserWinForm.InnerProg.Parser
 {
     class GetStartPageUrl{
-        private static string host = "https://hh.ru";
+        private string host = "https://hh.ru";
         private string href = "/search/vacancy?excluded_text=Senior%2C+Unity&search_field=name&search_field=company_name&search_field=description&text=c%23&from=suggest_post&page=";
         private string exclutedText { get; set; }
         private string searchingText { get; set; }

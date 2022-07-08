@@ -6,7 +6,7 @@ using System.IO;
 namespace HHParserWinForm.InnerProg.Cookies
 {
     class FileToCookies{
-        public string GetCookieStringFromFile(){
+        public static string GetCookieStringFromFile(){
             var cookiesFromFile = JsonConvert.DeserializeObject<CookieModel[]>(File.ReadAllText("cookies.txt"));
             string allCookies = "";
             foreach (var c in cookiesFromFile){
