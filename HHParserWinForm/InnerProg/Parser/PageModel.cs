@@ -1,5 +1,7 @@
-﻿namespace HHParserWinForm.InnerProg.Parser{
-    class PageModel{
+﻿namespace HHParserWinForm.InnerProg.Parser
+{
+    class PageModel
+    {
         //public ObjectId Id { get; set; }
         public string Id { get; set; }
         public string Link { get; set; }

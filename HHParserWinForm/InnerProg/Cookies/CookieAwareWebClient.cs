@@ -1,8 +1,11 @@
 ﻿using System.Net;
 
-namespace HHParserWinForm.InnerProg.Cookies{
-    class CookieAwareWebClient : WebClient{
-        public CookieAwareWebClient(){
+namespace HHParserWinForm.InnerProg.Cookies
+{
+    class CookieAwareWebClient : WebClient
+    {
+        public CookieAwareWebClient()
+        {
             CookieContainer = new CookieContainer();
             this.ResponseCookies = new CookieCollection();
 

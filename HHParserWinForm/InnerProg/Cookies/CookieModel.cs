@@ -2,8 +2,10 @@
 
 namespace HHParserWinForm.InnerProg.Cookies
 {
-    class CookieModel{
-        public CookieModel(string domain, DateTime? expirationDate, bool? hostOnly, bool? httpOnly, string name, string path, string sameSite, bool? secure, string value){
+    class CookieModel
+    {
+        public CookieModel(string domain, DateTime? expirationDate, bool? hostOnly, bool? httpOnly, string name, string path, string sameSite, bool? secure, string value)
+        {
             this.domain = domain;
             this.expirationDate = expirationDate;
             this.hostOnly = hostOnly;

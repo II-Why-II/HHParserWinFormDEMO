@@ -2,8 +2,10 @@
 using OpenQA.Selenium.Chrome;
 using System.Text;
 
-namespace HHParserWinForm.InnerProg.Sender{
-    class AboutBrowser{
+namespace HHParserWinForm.InnerProg.Sender
+{
+    class AboutBrowser
+    {
         public bool FinalPage = new bool();
         public int NumberOfSearchingPage = 1;
         public bool BrowserIsStarted = new bool();
@@ -24,11 +26,11 @@ namespace HHParserWinForm.InnerProg.Sender{
         public int exitError = 0;
         public int SendingErrors = 0;
 
-        public void SetOptions(){
+        public void SetOptions()
+        {
             ChromeOptions.AddArguments("--disable-blink-features=AutomationControlled");
             ChromeOptions.AddArgument("ignore-certificate-errors");
             //chromeOptions.AddArguments($"--proxy-server=socks5://{textBox5.Text}");
         }
     }
 }
-

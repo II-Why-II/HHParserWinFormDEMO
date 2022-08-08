@@ -2,7 +2,8 @@
 
 namespace HHParserWinForm.InnerProg
 {
-    class DefaultStrings{
+    class DefaultStrings
+    {
         private static IMongoClient MongoClientLocal = new MongoClient("mongodb://localhost:27017");
         public static IMongoDatabase MongoDatabaseHHParse = MongoClientLocal.GetDatabase("HHParse02");
         public static IMongoCollection<Parser.PageModel> MongoCollectionVacancies = MongoDatabaseHHParse.GetCollection<Parser.PageModel>("Vacancies");
